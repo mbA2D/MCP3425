@@ -1,0 +1,19 @@
+MCP3425								KEYWORD1
+
+MCP3425_conf_reg					KEYWORD2
+
+init								KEYWORD2
+reset								KEYWORD2
+	
+set_gain							KEYWORD2
+set_rate							KEYWORD2
+set_mode							KEYWORD2
+
+trigger_conversion					KEYWORD2
+trigger_and_get_single_shot_result	KEYWORD2
+update_conversion_result			KEYWORD2
+get_conversion_result				KEYWORD2
+get_drdy							KEYWORD2
+get_conf_byte						KEYWORD2
+
+measure_voltage						KEYWORD2
