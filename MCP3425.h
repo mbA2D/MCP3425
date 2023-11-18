@@ -68,6 +68,7 @@ class MCP3425
 		uint8_t get_conf_byte();
 
 		float measure_voltage(); //uses single-shot mode
+		float measure_voltage_continuous(); //uses continuous mode
 	
 	private:
 		void _set_reg_defaults();

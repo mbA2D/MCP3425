@@ -22,6 +22,7 @@ void setup()
 void loop()
 {
 	Serial.print("Voltage: ");
-	Serial.println(adc.measure_voltage());
+	Serial.println(adc.measure_voltage(),5);
 	Serial.println("----------------");
+	delay(500);
 }
