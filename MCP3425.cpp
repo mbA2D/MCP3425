@@ -115,7 +115,6 @@ float MCP3425::measure_voltage_continuous()
 {
 	//this function should return the voltage at the pins of the ADC.
 	update_conversion_result();
-	int16_t reading = get_conversion_result();
 	
 	//gain
 	uint8_t gain = 0;
@@ -124,7 +123,7 @@ float MCP3425::measure_voltage_continuous()
 	else if (_conf_reg.bits.gain == MCP3425_GAIN_4) gain = 4;
 	else if (_conf_reg.bits.gain == MCP3425_GAIN_8) gain = 8;
 	
-	return ((float(reading) / float(MCP3425_FULL_SCALE_POS_CODE)) * (MCP3425_VOLTAGE_REFERENCE_V / gain));
+	return ((float(_conv_result) / float(MCP3425_FULL_SCALE_POS_CODE)) * (MCP3425_VOLTAGE_REFERENCE_V / gain));
 }
 
 float MCP3425::measure_voltage()
