@@ -161,8 +161,8 @@ void MCP3425::_write_conf_reg()
 
 void MCP3425::_write_general_reset()
 {
-	_i2c->beginTransmission(I2C_GENERAL_CALL_ADDRESS);
-	_i2c->write(I2C_GENERAL_CALL_RESET);
+	_i2c->beginTransmission(I2C_GENERAL_CALL_MCP3425_ADDRESS);
+	_i2c->write(I2C_GENERAL_CALL_MCP3425_RESET);
 	_i2c->endTransmission(true);
 }
 
